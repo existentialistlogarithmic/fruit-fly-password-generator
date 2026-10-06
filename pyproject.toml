@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flypass"
+version = "0.1.0"
+description = "Password generator driven by a simulated fruit-fly brain (FlyWire connectome)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+build = ["pandas>=2", "pyarrow", "requests"]
+test = ["pytest"]
+
+[project.scripts]
+flypass = "flypass.cli:main"
+
+[tool.setuptools]
+packages = ["flypass"]
+
+[tool.setuptools.package-data]
+flypass = ["data/*.npz"]
