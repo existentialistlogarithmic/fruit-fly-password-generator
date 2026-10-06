@@ -26,7 +26,7 @@ $ flypass --brain
    (antennal lobe → mushroom body → lateral horn). Synapse counts and excitatory/inhibitory
    signs come from FlyWire, and the neuron parameters come from Shiu et al. 2024's whole-brain fly model.
    Spike timing, membrane noise, and starting voltages are all randomized from the seed.
-4. **Extract.** The seed, the odor, and the fly's full spike raster (~119 KB of activity) go into
+4. **Extract.** The seed, the odor, and the fly's full spike raster (~238 KB of activity) go into
    SHAKE-256, which yields a stream of bytes.
 5. **Characters.** Bytes become characters through rejection sampling, which avoids modulo bias.
    If a password is missing a character class, the whole password is redrawn, so the result is uniform
